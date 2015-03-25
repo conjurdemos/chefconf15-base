@@ -1,0 +1,17 @@
+---
+driver_plugin: docker
+
+driver_config:
+  socket: <%= ENV['DOCKER_HOST'] || 'unix:///var/run/docker.sock' %>
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[conjur_base::default]
+    attributes:
