@@ -1,3 +1,4 @@
+include_recipe 'apt'
 include_recipe 'terminal-login::install'
 include_recipe 'terminal-login::sudoers'
 
