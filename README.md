@@ -1,4 +1,4 @@
-# conjur_base
+# foundation
 
 This cookbook is a representation of a base cookbook set up with Conjur.
 

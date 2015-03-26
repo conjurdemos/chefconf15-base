@@ -13,5 +13,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[conjur_base::default]
+      - recipe[foundation::default]
     attributes:

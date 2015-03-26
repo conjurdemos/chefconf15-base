@@ -1,4 +1,4 @@
-name             'conjur_base'
+name             'foundation'
 maintainer       'Conjur'
 license          'MIT'
 description      'Installs base Conjur configuration'
