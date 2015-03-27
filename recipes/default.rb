@@ -5,6 +5,13 @@ include_recipe 'terminal-login::sudoers'
 include_recipe 'foundation::logshipper'
 include_recipe 'foundation::chefdk'
 
+cookbook_file '/etc/conjur.identity' do
+  source 'conjur.identity'
+  owner 'root'
+  group 'conjur'
+  mode '0640'
+end
+
 cookbook_file '/etc/conjur.conf' do
   source 'conjur.conf'
   owner 'root'
