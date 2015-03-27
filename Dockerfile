@@ -6,13 +6,11 @@ RUN cd /tmp && \
   curl -o chefdk.deb https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.4.0-1_amd64.deb && \
   dpkg -i chefdk.deb
 
-ADD . /chef/foundation
+ADD . /chef
 ADD build/solo.rb /chef/solo.rb
 
-WORKDIR /chef/foundation
+WORKDIR /chef
 
 RUN chef-solo -c /chef/solo.rb -o recipe[foundation]
-
-RUN rm -rf /chef
 
 RUN rm /etc/service/sshd/down

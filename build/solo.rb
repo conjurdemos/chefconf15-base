@@ -1,1 +1,1 @@
-cookbook_path ["/chef/foundation/.vendor"]
+cookbook_path ["/chef/.vendor"]
