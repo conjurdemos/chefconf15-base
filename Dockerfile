@@ -12,3 +12,7 @@ ADD build/solo.rb /chef/solo.rb
 WORKDIR /chef/foundation
 
 RUN chef-solo -c /chef/solo.rb -o recipe[foundation]
+
+RUN rm -rf /chef
+
+RUN rm /etc/service/sshd/down
