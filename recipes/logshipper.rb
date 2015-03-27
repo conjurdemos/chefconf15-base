@@ -1,7 +1,6 @@
 require 'yaml'
 
 ## install package
-
 apt_repository 'conjur' do
   uri 'http://apt.conjur.s3-website-us-east-1.amazonaws.com'
   components %w(main)
@@ -12,7 +11,6 @@ end
 package 'logshipper'
 
 ## create the group, user, fifo and logfile
-
 group 'conjur' do
   action :create
   append true
@@ -54,6 +52,10 @@ end
 file "/var/log/logshipper.log" do
   owner 'logshipper'
   mode '0640'
+end
+
+directory '/etc/service/logshipper' do
+  recursive true
 end
 
 cookbook_file '/etc/syslog-ng/conf.d/logshipper.conf' do
