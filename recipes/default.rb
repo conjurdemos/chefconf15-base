@@ -4,6 +4,7 @@ include_recipe 'terminal-login::sudoers'
 
 include_recipe 'foundation::logshipper'
 include_recipe 'foundation::chefdk'
+include_recipe 'conjur-client'
 
 cookbook_file '/etc/conjur.conf' do
   source 'conjur.conf'

@@ -14,3 +14,5 @@ WORKDIR /chef
 RUN chef-solo -c /chef/solo.rb -o recipe[foundation]
 
 RUN rm /etc/service/sshd/down
+
+ADD foundation-configure.sh /etc/my_init.d/10_foundation-configure.sh
