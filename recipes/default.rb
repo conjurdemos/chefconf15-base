@@ -2,6 +2,7 @@ include_recipe 'apt'
 include_recipe 'terminal-login::install'
 include_recipe 'terminal-login::sudoers'
 
+include_recipe 'foundation::logshipper'
 include_recipe 'foundation::chefdk'
 
 cookbook_file '/etc/conjur.conf' do
