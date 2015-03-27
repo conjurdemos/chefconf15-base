@@ -1,3 +1,0 @@
-machine https://conjur/api/authn
-  login @login@
-  password @password@
