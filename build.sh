@@ -1,9 +1,6 @@
-#!/bin/bash
-
-set -e
+#!/bin/bash -e
 
 berks vendor .vendor
 
 docker build -t foundation .
-
-rm -rf .vendor
+docker tag -f foundation conjurdemos/chefconf15-foundation
