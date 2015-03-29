@@ -1,4 +1,3 @@
-chef_gem 'netrc'
 require 'netrc'
 
 Netrc.configure do |config|
